@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG</title>
+  <style>
+    .shapes {
+      width: 600px;
+      height: 400px;
+      background: #ddd;
+    }
+    rect {
+      fill: orange;
+      stroke: dodgerblue;
+      stroke-width: 10;
+    }
+    /* svg 스타일은 태그에 인라인으로 넣는 것보다 스타일로 작성하는게 우선순위가 더 높다 */
+    /* ellipse {
+      fill: #fff000;
+    } */
+  </style>
+</head>
+<body>
+  <svg class="shapes">
+    <!-- fill값을 넣지 않으면 기본 fill값은 검정색으로 들어간다 -->
+    <rect x="10" y="20" width="200" height="100"/>
+    <!-- 사각형에서의 rx / ry - 모서리 반지름을 기준으로 라운드 처리함 -->
+    <rect x="50" y="170" rx="10" ry="10" width="100" height="100"/>
+    <!-- 
+      원은 센터 위치로 잡는다. cx / cy 
+      크기는 width / height가 아닌 반지름(radius)로 잡는다
+    -->
+    <circle cx="350" cy="250" r="30" />
+    <!-- 타원 -->
+    <ellipse cx="200" cy="200" rx="100" ry="50" fill="red" stroke="green" stroke-width="20" />
+  </svg>
+</body>
+</html>
